@@ -59,6 +59,9 @@ return {
         },
       })
     end,
-  }
+  },
+  {
+    'sotte/presenting.vim',
+  },
 
 }
