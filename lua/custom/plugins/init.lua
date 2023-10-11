@@ -60,4 +60,16 @@ return {
       })
     end,
   },
+  {
+    'vrischmann/tree-sitter-templ',
+    config = function()
+      require('nvim-treesitter.parsers').get_parser_configs().templ = {
+        install_info = {
+          url = 'https://github.com/vrischmann/tree-sitter-templ.git',
+          files = { 'src/parser.c', 'src/scanner.c' },
+          branch = 'master',
+      },
+    }
+    end,
+  },
 }
