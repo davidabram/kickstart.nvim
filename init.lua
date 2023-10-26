@@ -576,16 +576,3 @@ end)
 vim.cmd('let g:copilot_assume_mapped = v:true')
 vim.cmd('imap <silent><script><expr> <C-a> copilot#Accept("")')
 
-vim.filetype.add({
-  extension = {
-    mdx = 'mdx'
-  }
-})
-
-vim.treesitter.language.register('markdown', 'mdx');
-
-vim.treesitter.query.set('markdown', 'import_tsx', '((inline) @_inline (#match? @_inline "^import")) @tsx');
-vim.treesitter.query.set('markdown', 'export_tsx', '((inline) @_inline (#match? @_inline "^export")) @tsx');
-
-vim.treesitter.query.set('markdown', 'import_nospell', '((inline) @_inline (#match? @_inline "^import")) @nospell');
-vim.treesitter.query.set('markdown', 'export_nospell', '((inline) @_inline (#match? @_inline "^export")) @nospell');
