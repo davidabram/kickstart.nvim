@@ -528,6 +528,7 @@ cmp.setup {
   mapping = cmp_mappings,
   sources = {
     { name = 'nvim_lsp' },
+    { name = 'luasnip' },
   },
 }
 
