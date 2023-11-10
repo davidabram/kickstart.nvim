@@ -575,4 +575,3 @@ end)
 
 vim.cmd('let g:copilot_assume_mapped = v:true')
 vim.cmd('imap <silent><script><expr> <C-a> copilot#Accept("")')
-
