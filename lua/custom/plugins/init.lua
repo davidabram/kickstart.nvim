@@ -49,13 +49,23 @@ return {
         },
         sections = {
           lualine_b = {
-            { "branch", icon = "", fmt = truncate_branch_name },
+            { "branch", icon = "" },
             { harpoon_component },
             "diff",
             "diagnostics",
           },
           lualine_c = {
             { "filename", path = 1 },
+          },
+          lualine_x = {
+            "encoding",
+            "fileformat",
+            "filetype",
+          },
+          lualine_y = {
+          },
+          lualine_z = {
+            "location",
           },
         },
       })
