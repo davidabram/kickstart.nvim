@@ -1,5 +1,4 @@
 --[[
-
 =====================================================================
 ==================== READ THIS BEFORE CONTINUING ====================
 =====================================================================
@@ -59,11 +58,12 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-vim.keymap.set('i', '<C-a>', 'copilot#Accept("\\<CR>")', {
+--[[ vim.keymap.set('i', '<C-a>', 'copilot#Accept("\\<CR>")', {
   expr = true,
   replace_keycodes = false
 })
 vim.g.copilot_no_tab_map = true
+--]]
 
 -- NOTE: Here is where you install your plugins.
 --  You can configure plugins using the `config` key.
@@ -539,11 +539,13 @@ cmp.setup {
   },
   mapping = cmp_mappings,
   sources = {
-    { name = 'nvim_lsp' },
-    { name = 'luasnip' },
+    { name = "copilot",  group_index = 2 },
+    { name = 'nvim_lsp', group_index = 2 },
+    { name = 'luasnip',  group_index = 2 },
   },
 }
 
+vim.cmd("Copilot enable")
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
 
