@@ -115,6 +115,11 @@ return {
     end,
   },
   {
+    "davidmh/mdx.nvim",
+    config = true,
+    dependencies = { "nvim-treesitter/nvim-treesitter" }
+  },
+  {
     'nvim-treesitter/nvim-treesitter-context',
     config = function()
       require('treesitter-context').setup({
