@@ -72,13 +72,6 @@ vim.g.copilot_no_tab_map = true
 --    as they will be available in your neovim runtime.
 require('lazy').setup({
   -- NOTE: First, some plugins that don't require any configuration
-  {
-    dir = '~/repos/plugins/stack.nvim',
-    opts = {
-      test = true,
-    }
-  },
-
   -- Git related plugins
   'tpope/vim-fugitive',
   'tpope/vim-rhubarb',
