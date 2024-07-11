@@ -60,7 +60,7 @@ return {
           return ""
         end
 
-        return string.format("󱡅 %d", mark_idx)
+        return string.format("h", mark_idx)
       end
 
 
@@ -70,18 +70,14 @@ return {
         },
         sections = {
           lualine_b = {
-            { "branch", icon = "" },
+            { "branch", icon = "" },
             { harpoon_component },
             "diff",
-            "diagnostics",
           },
           lualine_c = {
             { "filename", path = 1 },
           },
           lualine_x = {
-            "encoding",
-            "fileformat",
-            "filetype",
           },
           lualine_y = {
           },
