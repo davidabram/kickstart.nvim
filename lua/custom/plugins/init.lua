@@ -34,6 +34,15 @@ return {
     end,
   },
   {
+    "supermaven-inc/supermaven-nvim",
+    config = function()
+      require("supermaven-nvim").setup({
+        disable_inline_completion = true,
+        disable_keymaps = true,
+      })
+    end,
+  },
+  {
     "zbirenbaum/copilot-cmp",
     config = function()
       require("copilot_cmp").setup()
@@ -70,7 +79,7 @@ return {
         },
         sections = {
           lualine_b = {
-            { "branch", icon = "" },
+            { "branch",         icon = "" },
             { harpoon_component },
             "diff",
           },
