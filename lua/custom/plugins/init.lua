@@ -33,6 +33,7 @@ return {
       })
     end,
   },
+  --[[
   {
     "supermaven-inc/supermaven-nvim",
     config = function()
@@ -42,6 +43,7 @@ return {
       })
     end,
   },
+  ]] --
   {
     "zbirenbaum/copilot-cmp",
     config = function()
