@@ -58,10 +58,6 @@ return {
   },
   {
     'nvim-lualine/lualine.nvim',
-    dependencies = {
-      'nvim-tree/nvim-web-devicons',
-      opts = true
-    },
     config = function()
       local function harpoon_component()
         local mark_idx = require("harpoon.mark").get_current_index()
