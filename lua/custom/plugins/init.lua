@@ -25,19 +25,6 @@ vim.keymap.set('n', 'Q', '<nop>')
 vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
 vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
 
-vim.opt.guicursor = {
-  -- Normal mode and Visual mode: block cursor
-  'n-v-c:block',
-  -- Insert mode: vertical bar cursor (25% width)
-  'i:ver25',
-  -- Command-line mode: underline cursor
-  'r-cr:hor20',
-  -- Replace mode: vertical bar cursor (20% width)
-  'ci-ve:ver20',
-  -- Select mode: block cursor with the 'Cursor' highlight group
-  'sm:block-Cursor',
-}
-
 return {
   {
     'ThePrimeagen/harpoon',
@@ -74,6 +61,37 @@ return {
       vim.keymap.set('n', '<leader>a', function()
         harpoon:list():add()
       end)
+    end,
+  },
+  {
+    'Mofiqul/dracula.nvim',
+    priority = 1,
+    config = function()
+      vim.cmd.colorscheme 'dracula'
+    end,
+  },
+  {
+    'nvim-lualine/lualine.nvim',
+    config = function()
+      require('lualine').setup {
+        options = {
+          theme = 'auto',
+        },
+        sections = {
+          lualine_b = {
+            { 'branch', icon = 'þ' },
+            'diff',
+          },
+          lualine_c = {
+            { 'filename', path = 1 },
+          },
+          lualine_x = {},
+          lualine_y = {},
+          lualine_z = {
+            'location',
+          },
+        },
+      }
     end,
   },
 }
