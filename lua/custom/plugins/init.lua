@@ -64,6 +64,7 @@ return {
     end,
   },
   {
+    -- Theme inspired by Atom
     'Mofiqul/dracula.nvim',
     priority = 1,
     config = function()
@@ -75,7 +76,7 @@ return {
     config = function()
       require('lualine').setup {
         options = {
-          theme = 'auto',
+          theme = 'dracula-nvim',
         },
         sections = {
           lualine_b = {
