@@ -76,9 +76,12 @@ return {
     config = function()
       require('lualine').setup {
         options = {
-          theme = 'dracula-nvim',
+          theme = 'auto',
         },
         sections = {
+          lualine_a = {
+            'mode',
+          },
           lualine_b = {
             { 'branch', icon = 'þ' },
             'diff',
@@ -93,6 +96,27 @@ return {
           },
         },
       }
+    end,
+  },
+  {
+    'davidmh/mdx.nvim',
+    config = true,
+    dependencies = { 'nvim-treesitter/nvim-treesitter' },
+  },
+  {
+    'zbirenbaum/copilot.lua',
+    cmd = 'Copilot',
+    config = function()
+      require('copilot').setup {
+        suggestion = { enabled = false, auto_trigger = true },
+        panel = { enabled = false },
+      }
+    end,
+  },
+  {
+    'zbirenbaum/copilot-cmp',
+    config = function()
+      require('copilot_cmp').setup()
     end,
   },
 }
