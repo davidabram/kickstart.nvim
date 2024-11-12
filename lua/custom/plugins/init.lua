@@ -49,10 +49,21 @@ return {
   },
   {
     -- Theme inspired by Atom
-    'Mofiqul/dracula.nvim',
+    'uloco/bluloco.nvim',
     priority = 1,
+    lazy = false,
+    dependencies = { 'rktjmp/lush.nvim' },
     config = function()
-      vim.cmd.colorscheme 'dracula'
+      require('bluloco').setup {
+        style = 'auto',
+        transparent = false,
+        italics = false,
+        terminal = vim.fn.has 'gui_running' == 1,
+        guicursor = true,
+      }
+
+      vim.opt.termguicolors = true
+      vim.cmd 'colorscheme bluloco'
     end,
   },
   {
