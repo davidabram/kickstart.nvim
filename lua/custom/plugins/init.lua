@@ -2,7 +2,7 @@
 --  I promise not to create any merge conflicts in this directory :)
 --
 -- See the kickstart.nvim README for more information
-vim.keymap.set('n', '-', vim.cmd.Ex)
+vim.keymap.set('n', '-', '<cmd>Oil<CR>')
 
 vim.opt.nu = true
 vim.opt.relativenumber = true
