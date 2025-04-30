@@ -760,6 +760,7 @@ require('lazy').setup({
       end,
       formatters_by_ft = {
         lua = { 'stylua' },
+        go = { 'gofmt', 'golangci-lint', 'goimports', 'golines' },
         -- Conform can also run multiple formatters sequentially
         -- python = { "isort", "black" },
         --
